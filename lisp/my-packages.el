@@ -11,9 +11,10 @@
 (setq package-selected-packages '(evil lsp-mode yasnippet lsp-treemacs helm-lsp
                                   projectile hydra flycheck company avy diminish
                                   which-key helm-xref dap-mode lsp-ui color-theme-sanityinc-solarized
-				  yasnippet evil-smartparens sr-speedbar auto-compile helm helm-ag
-				  helm-gtags langtool flycheck-vale irony nlinum magit fzf
-				  highlight-indent-guides company-irony company-c-headers))
+                                  yasnippet evil-smartparens sr-speedbar auto-compile helm helm-ag
+                                  helm-gtags langtool flycheck-vale irony nlinum magit fzf
+                                  highlight-indent-guides company-irony company-c-headers
+                                  color-theme-sanityinc-tomorrow))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
    (package-refresh-contents)
