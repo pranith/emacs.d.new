@@ -89,7 +89,7 @@
 (interactive)
 (cond ((irony--check-parens)
       (message "enter on paren")
-      (insert "\n\n")
+      (insert "\n")
       (call-interactively 'c-indent-line-or-region)
       (beginning-of-line)
       (backward-char 1)
