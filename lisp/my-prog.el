@@ -184,5 +184,8 @@
 
 (setq-default show-trailing-whitespace t)
 
+(define-key c-mode-map (kbd "C-c /") 'lsp-ui-find-workspace-symbol)
+(define-key c++-mode-map (kbd "C-c /") 'lsp-ui-find-workspace-symbol)
+
 (provide 'my-prog)
 
