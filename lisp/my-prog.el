@@ -92,9 +92,10 @@
       (insert "\n")
       (call-interactively 'c-indent-line-or-region)
       (beginning-of-line)
-      (backward-char 1)
+      ;; (backward-char 1)
       (call-interactively 'c-indent-line-or-region))
       (t (call-interactively 'newline-and-indent))))
+
 (defun irony-mode-keys ()
 "Modify keymaps used by `irony-mode'."
 (local-set-key (kbd "TAB") 'irony--indent-or-complete)
@@ -103,6 +104,17 @@
 (local-set-key [return] 'irony--enter-and-indent)
 (local-set-key (kbd "RET") 'irony--enter-and-indent))
 (add-hook 'c-mode-common-hook 'irony-mode-keys)
+
+(defun evil-mode-quit ()
+  "Quit and indent"
+  (interactive)
+  (if (and evil-mode
+       (eq evil-state 'insert)
+       (c-indent-line-or-region)
+       ))
+  (evil-force-normal-state))
+
+(local-set-key (kbd "ESC") 'evil-mode-quit)
 
 (global-linum-mode t)
 (column-number-mode t)
