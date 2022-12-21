@@ -85,6 +85,7 @@
       (t
        (message "indent")
        (call-interactively 'c-indent-line-or-region))))
+
 (defun irony--enter-and-indent ()
 (interactive)
 (cond ((irony--check-parens)
@@ -184,6 +185,7 @@
 (c-add-style "m5" '("linux"
 		    (c-basic-offset . 4)
                     (indent-tabs-mode . nil)
+		    (fill-column . 100)
 	            (c-offsets-alist . ((substatement-open . 0)
 				        (inline-open . 0)
 				        (block-open . -4)
