@@ -1,6 +1,7 @@
 (require 'helm)
-(require 'helm-config)
+;; (require 'helm-config)
 (require 'helm-ag)
+(require 'helm-gtags)
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
