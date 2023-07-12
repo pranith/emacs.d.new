@@ -185,7 +185,7 @@
 (c-add-style "m5" '("linux"
 		    (c-basic-offset . 4)
                     (indent-tabs-mode . nil)
-		    (fill-column . 100)
+		    (fill-column . 95)
 	            (c-offsets-alist . ((substatement-open . 0)
 				        (inline-open . 0)
 				        (block-open . -4)
@@ -197,6 +197,8 @@
 				        (innamespace . 0)))))
 
 (setq-default show-trailing-whitespace t)
+(setq-default delete-trailing-whitespace t)
+(setq-default lsp-enable-indentation nil)
 
 (define-key c-mode-map (kbd "C-c /") 'lsp-ui-find-workspace-symbol)
 (define-key c++-mode-map (kbd "C-c /") 'lsp-ui-find-workspace-symbol)

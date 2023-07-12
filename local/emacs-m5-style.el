@@ -27,6 +27,7 @@
 (c-add-style "m5 '("gem5"
 	           (c-basic-offset . 4)
                    (indent-tabs-mode . nil)
+    	           (fill-column . 95)
 	           (c-offsets-alist . ((substatement-open . 0)
 				       (inline-open . 0)
 				       (block-open . -4)

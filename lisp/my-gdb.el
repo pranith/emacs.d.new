@@ -12,6 +12,8 @@
 (setq gdb-many-windows nil)
 (setq gud-gdb-command-name "gdb ~/work/gem5/build/ARM/gem5.debug")
 
+'(company-global-modes '(not gud-mode))
+
 (defun run-gdb ()
   "Invoke gdb with GEM5 binary"
   (interactive)
