@@ -57,6 +57,13 @@
 
 ;; Add final message so using C-h l I can see if .emacs failed
 (message ".emacs loaded successfully.")
+
+(defun terminal-init-screen ()
+  "Terminal initialization function for screen."
+   ;; Use the xterm color initialization code.
+   (xterm-register-default-colors)
+   (tty-set-up-initial-frame-faces))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
