@@ -16,8 +16,8 @@
 ;; You may delete these explanatory comments.
 
 (setq load-prefer-newer t)
-(add-to-list 'load-path "/usr/local/google/home/pranithk/.emacs.d/lisp")
-(add-to-list 'load-path "/usr/local/google/home/pranithk/.emacs.d/local")
+(add-to-list 'load-path "/home/pranith/.emacs.d/lisp")
+(add-to-list 'load-path "/home/pranith/.emacs.d/local")
 
 (require 'my-packages)
 (require 'my-helm)
@@ -25,7 +25,7 @@
 (require 'my-text)
 (require 'my-prog)
 (require 'my-gdb)
-(require 'my-irc)
+;(require 'my-irc)
 ;(require 'my-log)
 ;(require 'my-vg)
 
@@ -34,14 +34,14 @@
 (auto-compile-on-save-mode)
 
 ;; create backups
-(setq backup-directory-alist `(("." . "/usr/local/google/home/pranithk/.saves")))
+(setq backup-directory-alist `(("." . "/home/pranith/.saves")))
 (setq backup-by-copying t)
 (setq delete-old-versions t
   kept-new-versions 6
   kept-old-versions 2
   version-control t)
 
-(byte-recompile-directory (expand-file-name "/usr/local/google/home/pranithk/.emacs.d/lisp/") 0)
+(byte-recompile-directory (expand-file-name "/home/pranith/.emacs.d/lisp/") 0)
 
 (defun stop-using-minibuffer ()
   "kill the minibuffer"

@@ -1,9 +1,8 @@
 (require 'cc-mode)
 (require 'irony)
 (require 'company)
-(require 'nlinum)
 (require 'sr-speedbar)
-(require 'highlight-indent-guides)
+;; (require 'highlight-indent-guides)
 ;; (require 'flycheck)
 ;; (require 'ensime)
 (require 'evil-smartparens)
@@ -32,9 +31,9 @@
 (add-hook 'c++-mode-hook 'company-mode)
 (add-hook 'c-mode-hook 'company-mode)
 
-(add-hook 'c-mode-hook 'highlight-indent-guides-mode)
-(add-hook 'c++-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
+;; (add-hook 'c-mode-hook 'highlight-indent-guides-mode)
+;; (add-hook 'c++-mode-hook 'highlight-indent-guides-mode)
+;; (setq highlight-indent-guides-method 'character)
 
 (define-key c-mode-map  [(tab)] 'company-complete)
 (define-key c++-mode-map  [(tab)] 'company-complete)
@@ -117,7 +116,7 @@
 
 (local-set-key (kbd "ESC") 'evil-mode-quit)
 
-(global-linum-mode t)
+(global-display-line-numbers-mode t)
 (column-number-mode t)
 
 (setq sr-speedbar-right-side nil)

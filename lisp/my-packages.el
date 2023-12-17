@@ -5,8 +5,6 @@
         package-archives)
   (push '("melpa-stable" . "http://stable.melpa.org/packages/")
         package-archives)
-(package-initialize)
-(package-refresh-contents)
 
 (setq package-selected-packages '(evil lsp-mode yasnippet lsp-treemacs helm-lsp
                                   projectile hydra flycheck company avy diminish
@@ -16,15 +14,21 @@
                                   highlight-indent-guides company-irony company-c-headers
                                   color-theme-sanityinc-tomorrow))
 
-(when (cl-find-if-not #'package-installed-p package-selected-packages)
-   (package-refresh-contents)
-     (mapc #'package-install package-selected-packages))
+(package-initialize)
+(package-refresh-contents)
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
 
 (require 'use-package)
+
+(dolist (package package-selected-packages)
+ (unless (package-installed-p package)
+  (package-install package)))
+
+; (require 'use-package)
 (require 'diminish)
 (require 'bind-key)
 (require 'color-theme-sanityinc-solarized)
