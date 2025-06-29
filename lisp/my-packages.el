@@ -1,10 +1,8 @@
 (require 'package)
 
 (setq package-enable-at-startup nil)
-  (push '("melpa" . "https://melpa.org/packages/")
-        package-archives)
-  (push '("melpa-stable" . "http://stable.melpa.org/packages/")
-        package-archives)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (setq package-selected-packages '(evil lsp-mode yasnippet lsp-treemacs helm-lsp
                                   projectile hydra flycheck company avy diminish
@@ -12,7 +10,8 @@
                                   yasnippet evil-smartparens sr-speedbar auto-compile helm helm-ag
                                   helm-gtags langtool flycheck-vale irony nlinum magit fzf
                                   highlight-indent-guides company-irony company-c-headers
-                                  color-theme-sanityinc-tomorrow))
+                                  color-theme-sanityinc-tomorrow
+				  gnu-elpa-keyring-update all-the-icons doom-modeline))
 
 (package-initialize)
 (package-refresh-contents)
@@ -51,6 +50,13 @@
 ;(use-package ensime
 ; :ensure t
 ; :pin melpa-stable)
+
+(when (display-graphic-p)
+  (require 'all-the-icons))
+
+(use-package doom-modeline
+  :ensure t
+  :hook (after-init . doom-modeline-mode))
 
 (provide 'my-packages)
 ;;; my-packages ends here

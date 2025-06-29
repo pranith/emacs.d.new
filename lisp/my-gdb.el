@@ -10,14 +10,14 @@
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
 (setq gdb-many-windows nil)
-(setq gud-gdb-command-name "gdb ~/work/gem5/build/ARM/gem5.debug")
+(setq gud-gdb-command-name "gdb ~/workspace/code/gem5/build/ARM/gem5.debug")
 
 '(company-global-modes '(not gud-mode))
 
 (defun run-gdb ()
   "Invoke gdb with GEM5 binary"
   (interactive)
-  (let ((default-directory "~/work/gem5/"))
+  (let ((default-directory "~/workspace/code/gem5/"))
   (gud-gdb "build/ARM/gem5.debug")))
 ;  (gdb (shell-command-to-string "cat ~/debug.txt"))))
 

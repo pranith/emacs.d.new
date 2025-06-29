@@ -25,6 +25,7 @@
 (require 'my-text)
 (require 'my-prog)
 (require 'my-gdb)
+(require 'my-treemacs)
 ;(require 'my-irc)
 ;(require 'my-log)
 ;(require 'my-vg)
@@ -70,12 +71,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(custom-enabled-themes '(sanityinc-tomorrow-bright))
+ '(custom-enabled-themes '(sanityinc-tomorrow-eighties))
  '(custom-safe-themes
-   '("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
+   '("04aa1c3ccaee1cc2b93b246c6fbcd597f7e6832a97aaeac7e5891e6863236f9f" "48d34b6afe72407ca494387c8bea495bb2deee96bd88516f302db1f11e1810a1" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
+ '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(circe vale-mode chess fzf magit color-theme-sanityinc-tomorrow evil lsp-mode yasnippet lsp-treemacs helm-lsp projectile hydra flycheck company avy diminish which-key helm-xref dap-mode lsp-ui color-theme-sanityinc-solarized yasnippet evil-smartparens sr-speedbar auto-compile helm helm-ag langtool flycheck-vale irony nlinum highlight-indent-guides company-irony company-c-headers))
- '(safe-local-variable-values '((c-set-style . "m5"))))
+   '(treemacs-evil doom-modeline circe vale-mode chess fzf magit color-theme-sanityinc-tomorrow evil lsp-mode yasnippet lsp-treemacs helm-lsp projectile hydra flycheck company avy diminish which-key helm-xref dap-mode lsp-ui color-theme-sanityinc-solarized yasnippet evil-smartparens sr-speedbar auto-compile helm helm-ag langtool flycheck-vale irony nlinum highlight-indent-guides company-irony company-c-headers))
+ '(safe-local-variable-values '((c-set-style . "m5")))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
