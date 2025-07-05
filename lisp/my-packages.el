@@ -10,7 +10,7 @@
                                   yasnippet evil-smartparens sr-speedbar auto-compile helm helm-ag
                                   helm-gtags langtool flycheck-vale irony nlinum magit fzf
                                   highlight-indent-guides company-irony company-c-headers
-                                  color-theme-sanityinc-tomorrow
+                                  color-theme-sanityinc-tomorrow doom-themes
 				  gnu-elpa-keyring-update all-the-icons doom-modeline))
 
 (package-initialize)
@@ -57,6 +57,12 @@
 (use-package doom-modeline
   :ensure t
   :hook (after-init . doom-modeline-mode))
+
+(use-package doom-themes
+  :ensure t
+  :config
+  (doom-themes-org-config)
+  (doom-themes-visual-bell-config))
 
 (provide 'my-packages)
 ;;; my-packages ends here
